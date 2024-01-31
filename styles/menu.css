@@ -1,0 +1,96 @@
+.menu{
+    overflow-x: scroll;
+    background-color: var(--cor-do-menu);
+}
+
+.menu::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background-color: var(--cor-primaria);
+    border-radius: 20px;
+}
+
+
+
+.menu__list {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+
+.menu__list__itens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    background-color: black;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Efeito de click */
+.menu__list__itens > .icon {
+    width:50px;
+}
+
+.menu__list__itens:hover {
+    box-shadow: 0px 0px 7px 5px rgba(255, 255, 255, 0.164);
+    padding: 8px;
+}
+
+.selected {
+    box-shadow: 0px 0px 7px 5px rgba(255, 255, 255, 0.164);
+    padding: 8px;
+}
+/* Efeito de click */
+
+@media screen and (min-width:800px) {
+    .menu__list {
+        width: auto;
+    }
+    
+    .menu__list__itens > .icon {
+        width:70px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .menu {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .menu__list {
+        flex-direction: column;
+        padding: 15px;
+        height: 1000px;
+    }
+}
+
+@media screen and (min-width: 1650px) {
+    .menu__list {
+        height: auto;
+    }
+
+    .menu__list__itens > .icon {
+        width:90px;
+    }
+
+    .menu__list__itens {
+        padding: 15px;
+    }
+
+    .menu__list__itens:hover {
+        padding: 20px;
+    }
+
+    .selected {
+        padding: 20px;
+    }
+}

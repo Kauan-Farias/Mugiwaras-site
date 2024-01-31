@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import url(menu.css);
+@import url(principal.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --cor-de-fundo: #000000;
+    --cor-da-letra: #FFFFFF;
+    --cor-do-menu: #ffffff09;
+
+    --cor-primaria: #FFFFFF;
+    
+    --fonte-primaria: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-primaria);
+    color: var(--cor-da-letra);
+    height: 100vh;
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        display: grid;
+        grid-template-areas: "main aside";
+    }
+
+    .menu {
+        grid-area: aside;
+    }
+
+    .principal {
+        grid-area: main;
+    }
+}
