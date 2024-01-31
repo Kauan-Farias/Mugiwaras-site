@@ -1,0 +1,42 @@
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.principal__character {
+    width: 400px;
+}
+
+.principal__container-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.principal__container-description > img {
+    display: block;
+    width: 200px;
+}
+
+.description-title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.description-text {
+    font-size: 1rem;
+    line-height: normal;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+@media screen and (max-width: 800px) {
+    .small-character {
+        width: 200px;
+    }
+}

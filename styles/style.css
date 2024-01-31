@@ -1,0 +1,39 @@
+@import url(menu-lateral.css);
+@import url(principal.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --cor-de-fundo: #000000;
+    --cor-menu-lateral: #4E4E4E26;
+    --cor-primaria: #FFFFFF;
+    --cor-da-letra: #FFFFFF;
+
+    --fonte-primaria: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "aside"
+    "main";
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-da-letra);
+    font-family: var(--fonte-primaria);
+}
+
+.menu-lateral {
+    grid-area: aside;
+}
+
+.principal {
+    grid-area: main;
+}
+
+
+@media screen and (min-width: 711px){
+    body {
+        display: grid;
+        grid-template-areas: 
+        "main aside";
+    }
+}
